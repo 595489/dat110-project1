@@ -20,7 +20,8 @@ public class MessageUtils {
 		
 		// encapulate/encode the payload data of the message and form a segment
 		// according to the segment format for the messagin layer
-		
+
+		// Standard stuff, remove from file after implementing
 		if (true)
 			throw new UnsupportedOperationException(TODO.method());
 			

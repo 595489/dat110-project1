@@ -2,6 +2,11 @@ package no.hvl.dat110.messaging;
 
 import no.hvl.dat110.TODO;
 
+/**
+ * @author Isak Aasemoen Aardal
+ *
+ * Defines the message class
+ */
 public class Message {
 
 	private byte[] data;
@@ -9,9 +14,20 @@ public class Message {
 	public Message(byte[] data) {
 		
 		// TODO - START
-		
-		if (true)
-			throw new UnsupportedOperationException(TODO.constructor("Message"));
+
+		// Potential implementation. Most likely needs refactoring to be properly constructed
+		try {
+			if (data.length < 128) {
+				this.data = data;
+			}
+		}
+		catch (NullPointerException e){
+			throw new NullPointerException("nullpointer exception");
+		}
+
+		// Standard stuff. Remove from file after finishing
+//		if (true)
+//			throw new UnsupportedOperationException(TODO.constructor("Message"));
 			
 		// TODO - END
 	}
