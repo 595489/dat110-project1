@@ -10,16 +10,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="module-library" scope="TEST">
-      <library name="tests">
-        <CLASSES />
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/../../dat110-project1-testing/dat110-project1-tests/src" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="library" name="src" level="project" />
-    <orderEntry type="module-library" scope="TEST">
       <library name="JUnit4">
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.13.1/junit-4.13.1.jar!/" />
