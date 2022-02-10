@@ -44,9 +44,10 @@ public class Connection {
 		} catch (IOException e) {
 			System.out.println("error occurred" + e); 
 		}
-		
-		if (true)
-			throw new UnsupportedOperationException(TODO.method());
+
+		// Standard stuff. Remove after implementing method
+//		if (true)
+//			throw new UnsupportedOperationException(TODO.method());
 			
 		// TODO - END
 
@@ -65,9 +66,10 @@ public class Connection {
 		} catch (IOException e) {
 			System.out.println("Error occurred" + e); 
 		}
-		
-		if (true)
-			throw new UnsupportedOperationException(TODO.method());
+
+		// Standard stuff. Remove after implementing method
+//		if (true)
+//			throw new UnsupportedOperationException(TODO.method());
 		
 		// TODO - END
 		
