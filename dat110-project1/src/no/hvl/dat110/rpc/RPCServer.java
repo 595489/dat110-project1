@@ -1,11 +1,10 @@
 package no.hvl.dat110.rpc;
 
-import java.util.HashMap;
-
-import no.hvl.dat110.TODO;
 import no.hvl.dat110.messaging.Connection;
 import no.hvl.dat110.messaging.Message;
 import no.hvl.dat110.messaging.MessagingServer;
+
+import java.util.HashMap;
 
 public class RPCServer {
 
@@ -42,13 +41,20 @@ public class RPCServer {
 		   
 		   // TODO - START
 		   // - receive Message containing RPC request
+			Message recievedMessage = connection.receive();
 		   // - find the identifier for the RPC method to invoke
+			byte[] bytes = recievedMessage.getData();
+			rpcid = bytes[0];
 		   // - lookup the method to be invoked
+			RPCRemoteImpl finn = services.get(rpcid);
 		   // - invoke the method
+			byte[] svar = finn.invoke(bytes);
 		   // - send back message containing RPC reply
+			Message response = new Message(svar);
+			connection.send(response);
 			
-		   if (true)
-				throw new UnsupportedOperationException(TODO.method());
+		//   if (true)
+		//	 	throw new UnsupportedOperationException(TODO.method());
 		   
 		   // TODO - END
 		   
