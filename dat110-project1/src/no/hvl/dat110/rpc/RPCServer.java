@@ -48,9 +48,9 @@ public class RPCServer {
 		   // - lookup the method to be invoked
 			RPCRemoteImpl finn = services.get(rpcid);
 		   // - invoke the method
-			byte[] svar = finn.invoke(bytes);
+			byte[] svar = finn.invoke(RPCUtils.decapsulate(bytes));
 		   // - send back message containing RPC reply
-			Message response = new Message(svar);
+			Message response = new Message(RPCUtils.encapsulate(rpcid, svar));
 			connection.send(response);
 			
 		//   if (true)

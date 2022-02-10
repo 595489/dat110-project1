@@ -68,12 +68,18 @@ public class RPCClient {
 		according to the RPC message format
 			
 		*/
-		
-		Message request = new Message(params); 
-//		MessageUtils.encapsulate(request); 
+
+		Message request = new Message(RPCUtils.encapsulate(rpcid, params));
 		connection.send(request);
 		Message recieve = connection.receive();
-		returnval = recieve.getData(); 
+		returnval = RPCUtils.decapsulate(recieve.getData());
+
+
+//		Message request = new Message(params);
+//		MessageUtils.encapsulate(request);
+//		connection.send(request);
+//		Message recieve = connection.receive();
+//		returnval = recieve.getData();
 				
 //		if (true)
 //			throw new UnsupportedOperationException(TODO.method());
