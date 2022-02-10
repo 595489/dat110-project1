@@ -54,12 +54,12 @@ public class Connection {
 	}
 
 	public Message receive() {
-
+		Message message = null;
+		byte[] data;
 
 		// TODO - START
 		// read a segment from the input stream and decapsulate into message
-		Message message = null;
-		byte[] data = new byte [MessageConfig.SEGMENTSIZE];
+		data = new byte [MessageConfig.SEGMENTSIZE];
 		
 		try {
 			inStream.read(data);
