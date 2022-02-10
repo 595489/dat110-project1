@@ -36,8 +36,8 @@ public class Controller  {
 		sensorclient.connect();
 		//??
 			
-		if (true)
-			throw new UnsupportedOperationException(TODO.method());
+//		if (true)
+//			throw new UnsupportedOperationException(TODO.method());
 		
 		// TODO - END
 		
