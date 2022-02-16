@@ -19,10 +19,7 @@ public class DisplayDevice {
 		DisplayImpl display = new DisplayImpl((byte)1,displayserver); 
 		
 		displayserver.run(); 
-		displayserver.stop(); 
-				
-//		if (true)
-//			throw new UnsupportedOperationException(TODO.method());
+		displayserver.stop();
 		
 		// TODO - END
 		

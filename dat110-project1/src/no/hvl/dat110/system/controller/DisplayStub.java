@@ -22,9 +22,6 @@ public class DisplayStub extends RPCLocalStub {
 		byte[] recieve = rpcclient.call(RPCIDDISPLAY, send); 
 		RPCUtils.unmarshallVoid(recieve);
 		
-//		if (true)
-//			throw new UnsupportedOperationException(TODO.method());
-		
 		// TODO - END
 		
 	}

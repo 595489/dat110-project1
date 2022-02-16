@@ -21,9 +21,7 @@ public class SensorStub extends RPCLocalStub {
 		rpcclient.connect();
 		byte[] send = RPCUtils.marshallInteger(temp);
 		byte[] recieve = rpcclient.call(RPCIDREAD, send);
-		RPCUtils.unmarshallVoid(send);
-		//if (true)
-		//	throw new UnsupportedOperationException(TODO.method());
+		temp = RPCUtils.unmarshallInteger(recieve);
 		
 		// TODO - END
 		

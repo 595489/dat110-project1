@@ -38,21 +38,22 @@ public class Controller  {
 		sensorclient.connect();
 		//??
 
-		// Doesn't work yet
-		Integer x;
-		for (int i = 0; i < 20; i++){
-			x = sensor.read();
-			display.write(x.toString());
-			try{
-				sleep(1000);
-			}
-			catch (InterruptedException e){
-				System.out.println("Error... " + e);
-			}
-		}
-			
-//		if (true)
-//			throw new UnsupportedOperationException(TODO.method());
+		int x = sensor.read();
+		System.out.println("Controller recieved temp: " + x);
+		display.write(Integer.toString(x));
+
+//		// Doesn't work yet
+//		int x;
+//		for (int i = 0; i < 20; i++){
+//			x = sensor.read();
+//			display.write(Integer.toString(x));
+//			try{
+//				sleep(1000);
+//			}
+//			catch (InterruptedException e){
+//				System.out.println("Error... " + e);
+//			}
+//		}
 		
 		// TODO - END
 		
