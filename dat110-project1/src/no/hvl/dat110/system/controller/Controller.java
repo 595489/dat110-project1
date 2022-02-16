@@ -1,6 +1,5 @@
 package no.hvl.dat110.system.controller;
 
-import no.hvl.dat110.TODO;
 import no.hvl.dat110.rpc.RPCClient;
 import no.hvl.dat110.rpc.RPCClientStopStub;
 
@@ -38,23 +37,23 @@ public class Controller  {
 		sensorclient.connect();
 		//??
 
-		// Enkle kall, med en output til consoll for klarifisering
-		int x = sensor.read();
-		System.out.println("Controller recieved temp: " + x);
-		display.write(Integer.toString(x));
+//		// Enkle kall, med en output til consoll for klarifisering
+//		int x = sensor.read();
+//		System.out.println("Controller recieved temp: " + x);
+//		display.write(Integer.toString(x));
 
-//		// Doesn't work yet. Dette skal ta over for den enkle versjonen over når koden kjører korrekt
-//		int x;
-//		for (int i = 0; i < 20; i++){
-//			x = sensor.read();
-//			display.write(Integer.toString(x));
-//			try{
-//				sleep(1000);
-//			}
-//			catch (InterruptedException e){
-//				System.out.println("Error... " + e);
-//			}
-//		}
+		// Doesn't work yet. Dette skal ta over for den enkle versjonen over når koden kjører korrekt
+		int x;
+		for (int i = 0; i < 20; i++){
+			x = sensor.read();
+			display.write(Integer.toString(x));
+			try{
+				sleep(1000);
+			}
+			catch (InterruptedException e){
+				System.out.println("Error... " + e);
+			}
+		}
 		
 		// TODO - END
 		

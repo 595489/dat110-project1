@@ -1,9 +1,8 @@
 package no.hvl.dat110.system.display;
 
-import no.hvl.dat110.TODO;
 import no.hvl.dat110.rpc.RPCRemoteImpl;
-import no.hvl.dat110.rpc.RPCUtils;
 import no.hvl.dat110.rpc.RPCServer;
+import no.hvl.dat110.rpc.RPCUtils;
 
 public class DisplayImpl extends RPCRemoteImpl {
 

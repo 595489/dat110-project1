@@ -1,6 +1,5 @@
 package no.hvl.dat110.system.display;
 
-import no.hvl.dat110.TODO;
 import no.hvl.dat110.rpc.RPCServer;
 import no.hvl.dat110.system.controller.Common;
 
@@ -16,7 +15,7 @@ public class DisplayDevice {
 		// see how this is done for the sensor RPC server in SensorDevice
 		
 		RPCServer displayserver = new RPCServer(Common.DISPLAYPORT);
-		DisplayImpl display = new DisplayImpl((byte)1,displayserver); 
+		DisplayImpl display = new DisplayImpl((byte)2,displayserver);
 		
 		displayserver.run(); 
 		displayserver.stop();
