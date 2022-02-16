@@ -38,11 +38,12 @@ public class Controller  {
 		sensorclient.connect();
 		//??
 
+		// Enkle kall, med en output til consoll for klarifisering
 		int x = sensor.read();
 		System.out.println("Controller recieved temp: " + x);
 		display.write(Integer.toString(x));
 
-//		// Doesn't work yet
+//		// Doesn't work yet. Dette skal ta over for den enkle versjonen over når koden kjører korrekt
 //		int x;
 //		for (int i = 0; i < 20; i++){
 //			x = sensor.read();
